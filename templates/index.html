@@ -1,9 +1,16 @@
 {% extends "layout.html" %} {% block main %}
 
-<form class="pt-4" action="/" method="POST">
-  <label for="name">Url</label>
-  <input type="text" id="link" name="link" required />
-  <button type="submit">Next</button>
-</form>
+<div class="box">
+  <!--div class="floor"></div-->
+  <form class="pt-4" action="/" method="POST">
+      <input type="text" id="link" name="link" required />
+      <label for="name" class="label-element">
+          <span class="label-name">url</span>
+          <div class="blue"></div>
+      </label>
+      
+      <!-- <button type="submit">Next</button> -->
+  </form>
+</div>
 
 {% endblock %}

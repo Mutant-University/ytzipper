@@ -1,0 +1,63 @@
+.box{
+    height:50vh; width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+    width:40%;
+    height:80px;
+    overflow: hidden;
+}
+
+form input{
+    height: 80%; width: 100%;
+    position:absolute;
+    bottom: 1px;
+    border-radius: 10px;
+    border:none;
+    outline: none;
+}
+
+form .label-element{
+    height: 100%; width: 100%;
+    display:flex;
+    position:absolute;
+    bottom: 2px;
+    pointer-events: none;
+    border-bottom: 2px solid black;
+}
+
+form .blue{
+    pointer-events: none;
+    height: 100%; width: 100%;
+    position:absolute;
+    bottom: -2px;
+    border-bottom: 4px solid blue;
+    transform: translateX(-100%);
+    transition: all 0.3s ease;
+}
+
+.label-name{
+    position: absolute;
+    bottom:0; left:0;
+    width: 100%; 
+    transition: all 0.3s ease;
+}
+
+form input:focus + .label-element .label-name,
+form input:valid + .label-element .label-name{
+    transform: translateY(-150%);
+    color:blue;
+}
+
+form input:focus + .label-element .blue,
+form input:valid + .label-element .blue{
+    transform: translateX(0);
+
+}
