@@ -1,12 +1,11 @@
-import flask
 import subprocess
+import flask
 from flask import Flask
 from flask import render_template
 
 
 YOUTUBE_DOWNLOAD_COMMAND = "youtube-dl"
-CHANGE_DIRECTORY = "cd; ls"
-TRIAL = 'cd playlist'
+
 # __name__ gets the environment variable called FLASK_APP 
 app = Flask(__name__)
 @app.route("/", methods = ["GET"])
